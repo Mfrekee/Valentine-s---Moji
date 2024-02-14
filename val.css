@@ -1,0 +1,72 @@
+/* p{
+    display: none;
+    background-color: pink;
+    animation-name: example;
+    animation-duration: 4s;
+    transition: width 2s, height 4s;
+    height: 9rem;
+  }
+  p:hover{
+     height: 12rem;
+  }
+
+  @keyframes example {
+    from {background-color: pink;}
+    to {background-color: yellow;}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+body {
+    font-family: "Protest Strike", sans-serif;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#message-container {
+    background-color: plum;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.455);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 1.5s ease;
+}
+
+#message {
+    width: 90%;
+    height: 90%;
+    padding: 15px;
+}
+
+/* Additional CSS for heartbeat animation */
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.fa-heart.fa-beat {
+    animation: heartbeat 1s infinite alternate;
+}
